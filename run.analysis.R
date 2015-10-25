@@ -38,6 +38,7 @@ y[, 1] = activities[y[, 1], 2]
 colnames(y) <- 'activity'
 colnames(subj) <- 'subject'
 
+;
 # Appropriately labels the data set with descriptive activity names.
 data <- cbind(subj, x.mean.sd, y)
 str(data)
