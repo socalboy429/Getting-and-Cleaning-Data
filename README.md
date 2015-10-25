@@ -15,15 +15,24 @@ run_analysis.R performs the following:
 
 Merges the training and the test sets to create one data set.
 1) Extracts only the measurements on the mean and standard deviation for each measurement.
+
 2) Uses descriptive activity names to name the activities in the data set
+
 3) Appropriately labels the data set with descriptive activity names.
+
 4) Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 run_analysis.R
 
 a) It downloads the UCI HAR Dataset data set and puts the zip file working directrory. After it is downloaded, it unzips the file into the UCI HAR Dataset folder.
+
 b) It loads the train and test data sets and appends the two datasets into one data frame. This is done using rbind.
+
 c) It extracts just the mean and standard deviation from the features data set. This is done using grep.
+
 d) After cleaning the column names, these are applied to the x data frame.
+
 e) After loading activities data set, it converts it to lower case using tolower and removes underscore using gsub. activity and subject column names are named for y and subj data sets, respectively.
+
 f) The three data sets, x, y and subj, are merged. Then, it is exported as a txt file into the Project folder in the same working directory, named merged_tidydata.txt.
+
 g) The mean of activities and subjects are created into a separate tidy data set which is exported into the Project folder as txt file; this is named average_tidydata.txt.
